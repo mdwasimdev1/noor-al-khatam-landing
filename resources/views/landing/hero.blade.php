@@ -19,7 +19,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                    <x-button variant="primary" href="#gallery" class="w-full sm:w-auto uppercase tracking-wider text-sm shadow-xl shadow-amber-500/20">
+                    <x-button variant="primary" href="#order-form" class="w-full sm:w-auto uppercase tracking-wider text-sm shadow-xl shadow-amber-500/20">
                         আংটির অর্ডার করুন
                     </x-button>
                 </div>
