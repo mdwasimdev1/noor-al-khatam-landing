@@ -1,11 +1,11 @@
 <section id="order-form" class="relative py-24 bg-[#f8fafc] overflow-hidden">
     <!-- Subtle Background Line Divider -->
-    <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <!-- Left Info Panel -->
             <div class="lg:col-span-5">
                 <span class="text-xs font-semibold tracking-widest text-amber-600 uppercase block mb-3 font-mono">কাস্টম পরামর্শ</span>

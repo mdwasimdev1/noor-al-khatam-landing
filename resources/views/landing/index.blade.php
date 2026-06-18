@@ -6,6 +6,6 @@
     @include('landing.hero')
     @include('landing.benefits')
     @include('landing.gallery')
-    @include('landing.faq')
+    {{-- @include('landing.faq') --}}
     @include('landing.order-form')
 @endsection

@@ -1,75 +1,93 @@
 <section id="benefits" class="relative py-24 bg-white overflow-hidden">
-    <!-- Subtle Background Line Divider -->
-    <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+    <!-- Top divider -->
+    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Ambient glows -->
+    <div class="absolute -top-40 -right-40 w-125 h-125 rounded-full bg-amber-50 blur-3xl opacity-50 pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-125 h-125 rounded-full bg-emerald-50 blur-3xl opacity-40 pointer-events-none"></div>
 
-        <!-- Section Title Component -->
-        <x-section-title
-            title="রাজমোহনী আংটির উপকারিতা"
-            subtitle="কারুকার্যের শ্রেষ্ঠত্ব" 
-            align="center"
-        />
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <!-- Benefits Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <!-- Benefit 1: Authenticity -->
-            <div class="group relative rounded-xl border border-slate-200/80 bg-slate-50/50 p-8 hover:bg-white hover:border-amber-500/40 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-100 transition-colors">
-                    <!-- Gemstone Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
+        <!-- ── Dark Benefits Card ── -->
+        <div class="mt-8 relative rounded-3xl overflow-hidden bg-white shadow-2xl shadow-slate-200/60 border border-slate-200">
+
+            <!-- Corner gold accents -->
+            <div class="absolute top-5 left-5 w-7 h-7 border-t-2 border-l-2 border-amber-500 rounded-tl-lg pointer-events-none"></div>
+            <div class="absolute top-5 right-5 w-7 h-7 border-t-2 border-r-2 border-amber-500 rounded-tr-lg pointer-events-none"></div>
+            <div class="absolute bottom-5 left-5 w-7 h-7 border-b-2 border-l-2 border-amber-500 rounded-bl-lg pointer-events-none"></div>
+            <div class="absolute bottom-5 right-5 w-7 h-7 border-b-2 border-r-2 border-amber-500 rounded-br-lg pointer-events-none"></div>
+
+            <!-- Inner glow -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-linear-to-r from-transparent via-amber-400/60 to-transparent"></div>
+
+            <div class="p-8 md:p-12">
+
+                <!-- Card Title -->
+                <div class="text-center mb-10">
+                    <span class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-400/30 text-amber-400 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        হালাল ও বিশ্বস্ত পণ্য
+                    </span>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-slate-900">
+                        হালালকৃত ভালো বিষয়সমূহ
+                    </h3>
+                    <div class="mt-3 mx-auto w-16 h-0.5 rounded-full bg-linear-to-r from-amber-500 to-amber-300"></div>
                 </div>
-                <h3 class="font-serif text-lg font-semibold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">আসল রত্ন পাথর</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    ১০০% প্রাকৃতিক, নৈতিকভাবে সংগৃহীত রত্ন পাথর, যা শতভাগ আসল হিসেবে প্রমাণিত। আমরা ইয়ামেনী আকিক, পার্সিয়ান ফিরোজা ও পান্না সরবরাহ করি।
-                </p>
-            </div>
 
-            <!-- Benefit 2: Hand-Engraved -->
-            <div class="group relative rounded-xl border border-slate-200/80 bg-slate-50/50 p-8 hover:bg-white hover:border-amber-500/40 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 mb-6 group-hover:bg-amber-100 transition-colors">
-                    <!-- Pen / Carving Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                    </svg>
+                <!-- ── Benefits List — two columns ── -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-0">
+
+                    @php
+                    $benefits = [
+                        ['color' => 'bg-emerald-500',  'shadow' => 'shadow-emerald-500/40',  'text' => '১০০% আসল রত্ন পাথর — ল্যাবে যাচাইকৃত'],
+                        ['color' => 'bg-amber-400',    'shadow' => 'shadow-amber-400/40',    'text' => 'খাঁটি ৯২৫ স্টার্লিং সিলভার ব্যান্ড'],
+                        ['color' => 'bg-sky-400',      'shadow' => 'shadow-sky-400/40',      'text' => 'হাতে তৈরি ক্যালিগ্রাফি খোদাই'],
+                        ['color' => 'bg-violet-500',   'shadow' => 'shadow-violet-500/40',   'text' => 'কাস্টম নাম বা কালিমা লেখানোর সুবিধা'],
+                        ['color' => 'bg-rose-500',     'shadow' => 'shadow-rose-500/40',     'text' => 'যেকোনো আঙুলের নিখুঁত মাপ ও ফিটিং'],
+                        ['color' => 'bg-teal-400',     'shadow' => 'shadow-teal-400/40',     'text' => 'বিনামূল্যে রিসাইজিং সুবিধা'],
+                        ['color' => 'bg-orange-500',   'shadow' => 'shadow-orange-500/40',   'text' => 'ইয়ামেনী আকিক, ফিরোজা ও পান্না উপলব্ধ'],
+                        ['color' => 'bg-emerald-400',  'shadow' => 'shadow-emerald-400/40',  'text' => 'প্রতিটি পণ্যে আসলত্বের সার্টিফিকেট'],
+                        ['color' => 'bg-amber-500',    'shadow' => 'shadow-amber-500/40',    'text' => 'দ্রুত ও নিরাপদ সারাদেশ ডেলিভারি'],
+                        ['color' => 'bg-sky-500',      'shadow' => 'shadow-sky-500/40',      'text' => 'প্রিমিয়াম লাক্সারি গিফট বক্সে প্যাকেজিং'],
+                        ['color' => 'bg-pink-500',     'shadow' => 'shadow-pink-500/40',     'text' => 'ক্যাশ অন ডেলিভারি সুবিধা'],
+                        ['color' => 'bg-lime-500',     'shadow' => 'shadow-lime-500/40',     'text' => 'ইসলামিক সুন্নাহ অনুযায়ী তৈরি আংটি'],
+                        ['color' => 'bg-cyan-400',     'shadow' => 'shadow-cyan-400/40',     'text' => 'পুরুষ ও মহিলা উভয়ের জন্য উপযুক্ত'],
+                        ['color' => 'bg-indigo-500',   'shadow' => 'shadow-indigo-500/40',   'text' => 'বিশেষ উপহার হিসেবে আদর্শ'],
+                        ['color' => 'bg-yellow-400',   'shadow' => 'shadow-yellow-400/40',   'text' => '১৫+ বছরের দক্ষ কারিগরি অভিজ্ঞতা'],
+                        ['color' => 'bg-emerald-500',  'shadow' => 'shadow-emerald-500/40',  'text' => '৫০০০+ সন্তুষ্ট গ্রাহকের বিশ্বাস'],
+                    ];
+                    @endphp
+
+                    @foreach($benefits as $benefit)
+                    <div class="group flex items-center gap-3.5 py-3.5 border-b border-slate-100 last:border-0 sm:nth-last-2:border-0 cursor-default hover:bg-amber-50/60 rounded-lg px-2 -mx-2 transition-colors duration-200">
+                        <!-- Coloured dot -->
+                        <span class="shrink-0 w-3 h-3 rounded-full {{ $benefit['color'] }} shadow-md {{ $benefit['shadow'] }} ring-2 ring-white group-hover:scale-110 transition-transform duration-200"></span>
+                        <!-- Text -->
+                        <span class="text-sm text-slate-700 group-hover:text-slate-900 transition-colors duration-200 leading-snug font-sans">
+                            {{ $benefit['text'] }}
+                        </span>
+                    </div>
+                    @endforeach
+
+                </div><!-- /grid -->
+
+                <!-- Bottom CTA strip -->
+                <div class="mt-10 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#order-form"
+                       class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold tracking-wider uppercase px-6 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-amber-500/30 shrink-0">
+                        এখনই অর্ডার করুন
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
-                <h3 class="font-serif text-lg font-semibold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">ক্যালিগ্রাফি খোদাই</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    আমাদের দক্ষ কারিগরদের কাস্টম ক্যালিগ্রাফি এবং সুক্ষ্ম ফিলিগিরি খোদাই সুবিধা। আংটিতে আপনার নাম, মনোগ্রাম বা ক্যালিগ্রাফি খোদাই করতে পারেন।
-                </p>
-            </div>
 
-            <!-- Benefit 3: Pure Silver -->
-            <div class="group relative rounded-xl border border-slate-200/80 bg-slate-50/50 p-8 hover:bg-white hover:border-amber-500/40 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-100 transition-colors">
-                    <!-- Shield Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                </div>
-                <h3 class="font-serif text-lg font-semibold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">৯২৫ খাঁটি রৌপ্য</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    দীর্ঘস্থায়িত্ব ও উজ্জ্বলতার জন্য আমরা ৯২৫ স্টার্লিং সিলভার ব্যবহার করি। আমাদের প্রতিটি আংটি ওজনে ভারী ও মসৃণ এবং দীর্ঘস্থায়ী টিকে থাকার উপযোগী।
-                </p>
-            </div>
+            </div><!-- /inner padding -->
+        </div><!-- /dark card -->
 
-            <!-- Benefit 4: Tailored Fit -->
-            <div class="group relative rounded-xl border border-slate-200/80 bg-slate-50/50 p-8 hover:bg-white hover:border-amber-500/40 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 mb-6 group-hover:bg-amber-100 transition-colors">
-                    <!-- Scale / Ruler Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4M4 4v16m0 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
-                    </svg>
-                </div>
-                <h3 class="font-serif text-lg font-semibold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">নিখুঁত মাপ ও ফিটিং</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    যেকোনো আঙুলের নিখুঁত মাপের জন্য কাস্টম-ফিট সুবিধা। আমরা সহজ সাইজিং গাইড প্রদান করি এবং সাইজে কোনো সমস্যা হলে বিনামূল্যে পরিবর্তনের সুবিধা দিই।
-                </p>
-            </div>
 
-        </div>
     </div>
 </section>

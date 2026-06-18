@@ -1,17 +1,17 @@
 <section id="faq" class="relative py-24 bg-white overflow-hidden">
     <!-- Subtle Background Line Divider -->
-    <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
 
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <x-section-title 
-            title="সাধারণ জিজ্ঞাসিত প্রশ্নাবলী" 
-            subtitle="বিস্তারিত তথ্য ও নির্দেশিকা" 
+
+        <x-section-title
+            title="সাধারণ জিজ্ঞাসিত প্রশ্নাবলী"
+            subtitle="বিস্তারিত তথ্য ও নির্দেশিকা"
             align="center"
         />
 
         <div class="mt-12 space-y-6">
-            
+
             <!-- Question 1 -->
             <details class="group rounded-xl border border-slate-200 bg-slate-50/60 p-6 [&_summary::-webkit-details-marker]:hidden" open>
                 <summary class="flex justify-between items-center w-full cursor-pointer select-none text-left list-none">

@@ -1,6 +1,6 @@
 <section id="gallery" class="relative py-24 bg-[#f1f5f9] overflow-hidden">
     <!-- Subtle Background Line Divider -->
-    <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -25,12 +25,12 @@
                      style="width: 300%; transform: translateX(0%);">
 
                     <!-- Slide 1 -->
-                    <div class="relative flex-shrink-0 h-full" style="width: 33.333%;">
+                    <div class="relative shrink-0 h-full" style="width: 33.333%;">
                         <img src="{{ asset('images/ring_hero.png') }}"
                              alt="ইয়ামেনী লাল আকিক আংটি"
                              class="w-full h-full object-cover">
                         <!-- Caption -->
-                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent px-8 pb-8 pt-16">
+                        <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-slate-900/80 via-slate-900/30 to-transparent px-8 pb-8 pt-16">
                             <span class="inline-block bg-amber-500/20 border border-amber-400/40 text-amber-300 text-[10px] font-bold tracking-[0.2em] px-3 py-1 rounded-full uppercase mb-2">দুর্লভ রত্ন</span>
                             <h3 class="font-serif text-2xl font-bold text-white tracking-wide">দি রয়্যাল আল-খাতাম</h3>
                             <p class="text-sm text-slate-300 mt-1 font-sans">ইয়ামেনী লাল আকিক — ৯২৫ স্টার্লিং সিলভার</p>
@@ -46,12 +46,12 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="relative flex-shrink-0 h-full" style="width: 33.333%;">
+                    <div class="relative shrink-0 h-full" style="width: 33.333%;">
                         <img src="{{ asset('images/ring_turquoise.png') }}"
                              alt="পার্সিয়ান ফিরোজা আংটি"
                              class="w-full h-full object-cover">
                         <!-- Caption -->
-                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent px-8 pb-8 pt-16">
+                        <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-slate-900/80 via-slate-900/30 to-transparent px-8 pb-8 pt-16">
                             <span class="inline-block bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[10px] font-bold tracking-[0.2em] px-3 py-1 rounded-full uppercase mb-2">জনপ্রিয় পছন্দ</span>
                             <h3 class="font-serif text-2xl font-bold text-white tracking-wide">দি পার্সিয়ান নিশাপুর</h3>
                             <p class="text-sm text-slate-300 mt-1 font-sans">পার্সিয়ান ফিরোজা — ৯২৫ স্টার্লিং সিলভার</p>
@@ -67,12 +67,12 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="relative flex-shrink-0 h-full" style="width: 33.333%;">
+                    <div class="relative shrink-0 h-full" style="width: 33.333%;">
                         <img src="{{ asset('images/ring_emerald.png') }}"
                              alt="পান্না সভরেন আংটি"
                              class="w-full h-full object-cover">
                         <!-- Caption -->
-                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent px-8 pb-8 pt-16">
+                        <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-slate-900/80 via-slate-900/30 to-transparent px-8 pb-8 pt-16">
                             <span class="inline-block bg-amber-500/20 border border-amber-400/40 text-amber-300 text-[10px] font-bold tracking-[0.2em] px-3 py-1 rounded-full uppercase mb-2">সীমিত সংস্করণ</span>
                             <h3 class="font-serif text-2xl font-bold text-white tracking-wide">দি এমেরাল্ড সভরেন</h3>
                             <p class="text-sm text-slate-300 mt-1 font-sans">সবুজ পান্না — ৯২৫ স্টার্লিং সিলভার</p>
