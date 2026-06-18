@@ -40,37 +40,20 @@
                 <!-- ── Benefits List — two columns ── -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-0">
 
-                    @php
-                    $benefits = [
-                        ['color' => 'bg-emerald-500',  'shadow' => 'shadow-emerald-500/40',  'text' => '১০০% আসল রত্ন পাথর — ল্যাবে যাচাইকৃত'],
-                        ['color' => 'bg-amber-400',    'shadow' => 'shadow-amber-400/40',    'text' => 'খাঁটি ৯২৫ স্টার্লিং সিলভার ব্যান্ড'],
-                        ['color' => 'bg-sky-400',      'shadow' => 'shadow-sky-400/40',      'text' => 'হাতে তৈরি ক্যালিগ্রাফি খোদাই'],
-                        ['color' => 'bg-violet-500',   'shadow' => 'shadow-violet-500/40',   'text' => 'কাস্টম নাম বা কালিমা লেখানোর সুবিধা'],
-                        ['color' => 'bg-rose-500',     'shadow' => 'shadow-rose-500/40',     'text' => 'যেকোনো আঙুলের নিখুঁত মাপ ও ফিটিং'],
-                        ['color' => 'bg-teal-400',     'shadow' => 'shadow-teal-400/40',     'text' => 'বিনামূল্যে রিসাইজিং সুবিধা'],
-                        ['color' => 'bg-orange-500',   'shadow' => 'shadow-orange-500/40',   'text' => 'ইয়ামেনী আকিক, ফিরোজা ও পান্না উপলব্ধ'],
-                        ['color' => 'bg-emerald-400',  'shadow' => 'shadow-emerald-400/40',  'text' => 'প্রতিটি পণ্যে আসলত্বের সার্টিফিকেট'],
-                        ['color' => 'bg-amber-500',    'shadow' => 'shadow-amber-500/40',    'text' => 'দ্রুত ও নিরাপদ সারাদেশ ডেলিভারি'],
-                        ['color' => 'bg-sky-500',      'shadow' => 'shadow-sky-500/40',      'text' => 'প্রিমিয়াম লাক্সারি গিফট বক্সে প্যাকেজিং'],
-                        ['color' => 'bg-pink-500',     'shadow' => 'shadow-pink-500/40',     'text' => 'ক্যাশ অন ডেলিভারি সুবিধা'],
-                        ['color' => 'bg-lime-500',     'shadow' => 'shadow-lime-500/40',     'text' => 'ইসলামিক সুন্নাহ অনুযায়ী তৈরি আংটি'],
-                        ['color' => 'bg-cyan-400',     'shadow' => 'shadow-cyan-400/40',     'text' => 'পুরুষ ও মহিলা উভয়ের জন্য উপযুক্ত'],
-                        ['color' => 'bg-indigo-500',   'shadow' => 'shadow-indigo-500/40',   'text' => 'বিশেষ উপহার হিসেবে আদর্শ'],
-                        ['color' => 'bg-yellow-400',   'shadow' => 'shadow-yellow-400/40',   'text' => '১৫+ বছরের দক্ষ কারিগরি অভিজ্ঞতা'],
-                        ['color' => 'bg-emerald-500',  'shadow' => 'shadow-emerald-500/40',  'text' => '৫০০০+ সন্তুষ্ট গ্রাহকের বিশ্বাস'],
-                    ];
-                    @endphp
-
-                    @foreach($benefits as $benefit)
+                    @forelse($benefits as $benefit)
                     <div class="group flex items-center gap-3.5 py-3.5 border-b border-slate-100 last:border-0 sm:nth-last-2:border-0 cursor-default hover:bg-amber-50/60 rounded-lg px-2 -mx-2 transition-colors duration-200">
                         <!-- Coloured dot -->
-                        <span class="shrink-0 w-3 h-3 rounded-full {{ $benefit['color'] }} shadow-md {{ $benefit['shadow'] }} ring-2 ring-white group-hover:scale-110 transition-transform duration-200"></span>
+                        <span class="shrink-0 w-3 h-3 rounded-full {{ $benefit->color }} shadow-md {{ $benefit->shadow }} ring-2 ring-white group-hover:scale-110 transition-transform duration-200"></span>
                         <!-- Text -->
                         <span class="text-sm text-slate-700 group-hover:text-slate-900 transition-colors duration-200 leading-snug font-sans">
-                            {{ $benefit['text'] }}
+                            {{ $benefit->text }}
                         </span>
                     </div>
-                    @endforeach
+                    @empty
+                    <p class="sm:col-span-2 py-6 text-center text-sm text-slate-500">
+                        সুবিধাগুলো শীঘ্রই যোগ করা হবে।
+                    </p>
+                    @endforelse
 
                 </div><!-- /grid -->
 

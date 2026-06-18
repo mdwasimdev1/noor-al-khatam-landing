@@ -2,123 +2,322 @@
     <!-- Subtle Background Line Divider -->
     <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Centered Header -->
+        <div class="text-center mb-8">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 leading-tight">
+                অর্ডার টি সম্পন্ন করতে আপনার নাম, মোবাইল নাম্বার ও ঠিকানা নিচে লিখুন
+            </h2>
+            <div class="border-b border-dashed border-slate-300 w-full mt-4"></div>
+        </div>
 
-            <!-- Left Info Panel -->
-            <div class="lg:col-span-5">
-                <span class="text-xs font-semibold tracking-widest text-amber-600 uppercase block mb-3 font-mono">কাস্টম পরামর্শ</span>
-                <h2 class="text-3xl md:text-5xl font-bold font-serif text-slate-900 leading-tight mb-6">
-                    আপনার কাস্টম <br>আংটির অর্ডার করুন
-                </h2>
-                <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-8 font-sans">
-                    নূর আল খাতামের প্রতিটি আংটি আমাদের ওয়ার্কশপে সম্পূর্ণ কাস্টমাইজড অর্ডারে তৈরি করা হয়। কাস্টম আংটি তৈরি করতে ফর্মটি পূরণ করুন, আমাদের প্রতিনিধি ১২ ঘণ্টার মধ্যে ইমেইল বা হোয়াটসঅ্যাপে আপনার সাথে যোগাযোগ করবেন।
-                </p>
+        <!-- Main Card Container -->
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-xl shadow-slate-100/50 p-6 sm:p-8">
+            <form action="#" method="POST" id="checkout-form" class="space-y-6">
+                @csrf
 
-                <!-- Helpful details list -->
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                    <!-- Left Column: Product Image Gallery & Billing Details (6 cols) -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <!-- Product Gallery Mockup -->
                         <div>
-                            <h4 class="font-serif text-sm font-semibold text-slate-800">দ্রুত সাড়া</h4>
-                            <p class="text-xs text-slate-500 mt-1">ডিজাইন এবং সাইজ ভেরিফিকেশন ১২-২৪ ঘণ্টার মধ্যে চূড়ান্ত করা হয়।</p>
+                            <div class="relative aspect-square rounded-xl overflow-hidden border border-slate-200/80 bg-white p-0.5 shadow-sm">
+                                <img
+                                    id="gallery-main"
+                                    src="{{ asset('images/ring_hero.png') }}"
+                                    alt="নূর আল খাতাম নকশা সোলেমানী আংটি"
+                                    class="w-full h-full object-cover rounded-lg transition-all duration-300"
+                                >
+                            </div>
+
+                            <!-- Thumbnail Slider -->
+                            <div class="relative mt-4 flex items-center justify-center px-8">
+                                <button type="button" id="gallery-prev" class="absolute left-0 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-400 hover:shadow-md transition-all z-10 cursor-pointer">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                                    </svg>
+                                </button>
+
+                                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="thumbnails-container">
+                                    <!-- Thumb 1 -->
+                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border-2 border-amber-600 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_hero.png') }}">
+                                        <img src="{{ asset('images/ring_hero.png') }}" class="w-full h-full object-cover">
+                                    </div>
+                                    <!-- Thumb 2 -->
+                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_turquoise.png') }}">
+                                        <img src="{{ asset('images/ring_turquoise.png') }}" class="w-full h-full object-cover">
+                                    </div>
+                                    <!-- Thumb 3 -->
+                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_emerald.png') }}">
+                                        <img src="{{ asset('images/ring_emerald.png') }}" class="w-full h-full object-cover">
+                                    </div>
+                                    <!-- Thumb 4 -->
+                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_hero.png') }}">
+                                        <img src="{{ asset('images/ring_hero.png') }}" class="w-full h-full object-cover">
+                                    </div>
+                                    <!-- Thumb 5 -->
+                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_turquoise.png') }}">
+                                        <img src="{{ asset('images/ring_turquoise.png') }}" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+
+                                <button type="button" id="gallery-next" class="absolute right-0 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-400 hover:shadow-md transition-all z-10 cursor-pointer">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                               <!-- Pricing -->
+                            <div class="flex items-baseline gap-3 pt-1">
+                                <span class="text-xs font-semibold text-slate-500">Price:</span>
+                                <span class="text-2xl font-black text-[#d97706] font-mono">৳ <span id="unit-price">১৯৫০</span></span>
+                                <span class="text-sm text-slate-400 line-through font-mono">৳ ৩০০০</span>
+                                <span class="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide">35% OFF</span>
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-500">
+                                <span>STATUS:</span>
+                                <span class="bg-emerald-50 text-emerald-600 border border-emerald-200/50 px-2 py-0.5 rounded text-[10px]">IN STOCK</span>
+                            </div>
+
+                            <!-- Quantity Selector -->
+                            <div class="flex items-center gap-3 pt-1">
+                                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">QUANTITY</span>
+                                <div class="inline-flex items-center border border-slate-350 rounded bg-white overflow-hidden shadow-sm">
+                                    <button type="button" id="qty-minus" class="w-8 h-8 flex items-center justify-center text-slate-600 hover:bg-slate-100 font-bold transition-colors select-none cursor-pointer">-</button>
+                                    <input
+                                        type="number"
+                                        id="qty-input"
+                                        name="quantity"
+                                        value="1"
+                                        min="1"
+                                        max="10"
+                                        readonly
+                                        class="w-10 text-center font-bold text-sm text-slate-800 focus:outline-none border-none pointer-events-none"
+                                    >
+                                    <button type="button" id="qty-plus" class="w-8 h-8 flex items-center justify-center text-slate-600 hover:bg-slate-100 font-bold transition-colors select-none cursor-pointer">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Right Column: Product Title, Pricing, Quantity & Summary (6 cols) -->
+                    <div class="lg:col-span-6 space-y-6 lg:pl-6 lg:border-l lg:border-slate-100 flex flex-col justify-between self-stretch">
+
+                        <div class="space-y-5">
+                            <!-- Product Title -->
+                            <!-- Billing Details Form -->
+                        <div class="pt-4 border-t border-slate-100">
+                            <h3 class="text-base font-bold text-slate-800 mb-4 pb-1 border-b border-slate-100">বিলিং ডিটেইলস</h3>
+
+                            <div class="space-y-4">
+                                <!-- Name -->
+                                <div>
+                                    <label for="name" class="block text-xs font-bold text-slate-700 mb-1.5">আপনার নাম লিখুন *</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        placeholder="আপনার নাম লিখুন"
+                                        class="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
+                                    >
+                                </div>
+
+                                <!-- Phone -->
+                                <div>
+                                    <label for="phone" class="block text-xs font-bold text-slate-700 mb-1.5">আপনার মোবাইল নাম্বার লিখুন *</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        required
+                                        placeholder="আপনার মোবাইল নাম্বার লিখুন"
+                                        class="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
+                                    >
+                                </div>
+
+                                <!-- Division Select -->
+                                <div>
+                                    <label for="division" class="block text-xs font-bold text-slate-700 mb-1.5">আপনার বিভাগ সিলেক্ট করুন *</label>
+                                    <select
+                                        id="division"
+                                        name="division"
+                                        required
+                                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm text-slate-700 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
+                                    >
+                                        <option value="" disabled selected>বিভাগ সিলেক্ট করুন</option>
+                                        <option value="Dhaka">Dhaka (ঢাকা)</option>
+                                        <option value="Chattogram">Chattogram (চট্টগ্রাম)</option>
+                                        <option value="Rajshahi">Rajshahi (রাজশাহী)</option>
+                                        <option value="Khulna">Khulna (খুলনা)</option>
+                                        <option value="Barishal">Barishal (বরিশাল)</option>
+                                        <option value="Sylhet">Sylhet (সিলেট)</option>
+                                        <option value="Rangpur">Rangpur (রংপুর)</option>
+                                        <option value="Mymensingh">Mymensingh (ময়মনসিংহ)</option>
+                                    </select>
+                                </div>
+
+                                <!-- Address -->
+                                <div>
+                                    <label for="address" class="block text-xs font-bold text-slate-700 mb-1.5">আপনার ঠিকানা *</label>
+                                    <input
+                                        type="text"
+                                        id="address"
+                                        name="address"
+                                        required
+                                        placeholder="গ্রাম/মহল্লা, ইউনিয়ন, থানা, জেলা"
+                                        class="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        <!-- Summary and Submit -->
+                        <div class="border-t border-dashed border-slate-200 pt-4 mt-6 space-y-4">
+                            <!-- Shipping -->
+                            <div class="flex items-center justify-between text-sm text-slate-600 font-medium">
+                                <span>ডেলিভারি চার্জ:</span>
+                                <span class="text-emerald-600 font-bold">Free Delivery</span>
+                            </div>
+
+                            <!-- Total Price -->
+                            <div class="flex items-center justify-between text-base font-bold text-slate-850">
+                                <span>টোটাল</span>
+                                <span class="text-lg font-black text-slate-900 font-mono">৳ <span id="total-price">১৯৫০</span></span>
+                            </div>
+
+                            <!-- Big Black Order Button -->
+                            <button
+                                type="submit"
+                                class="w-full bg-black hover:bg-slate-900 active:scale-[0.99] text-white font-bold text-sm py-4 rounded-lg flex items-center justify-center gap-2 tracking-wide transition-all shadow-lg shadow-black/10 hover:shadow-black/20 cursor-pointer"
+                            >
+                                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                </svg>
+                                অর্ডারটি নিশ্চিত করতে এখানে ক্লিক করুন
+                            </button>
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-serif text-sm font-semibold text-slate-800">১০০% নিরাপদ অর্ডার</h4>
-                            <p class="text-xs text-slate-500 mt-1">ডিজাইন কনসালটেশনের জন্য কোনো অগ্রিম পেমেন্ট প্রয়োজন নেই। চূড়ান্ত স্কেচ পছন্দ হলেই কেবল অর্ডার কনফার্ম করুন।</p>
-                        </div>
-                    </div>
                 </div>
-            </div>
-
-            <!-- Right Form Panel -->
-            <div class="lg:col-span-7">
-                <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 shadow-xl shadow-slate-250/50">
-                    <form action="#" method="POST" class="space-y-6">
-                        @csrf
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <!-- Full Name -->
-                            <div>
-                                <label for="name" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">আপনার সম্পূর্ণ নাম *</label>
-                                <input type="text" id="name" name="name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all">
-                            </div>
-
-                            <!-- Phone -->
-                            <div>
-                                <label for="phone" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">হোয়াটসঅ্যাপ / ফোন নম্বর *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+880 1XXX-XXXXXX" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all">
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div>
-                            <label for="email" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">ইমেইল এড্রেস *</label>
-                            <input type="email" id="email" name="email" required placeholder="you@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all">
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                            <!-- Tier -->
-                            <div>
-                                <label for="tier" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">প্যাকেজ নির্বাচন করুন</label>
-                                <select id="tier" name="tier" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-3 text-sm text-slate-700 focus:outline-none focus:bg-white focus:border-amber-600 transition-all">
-                                    <option value="signature">আর্টিসান সিগনেচার ($৩৪৯)</option>
-                                    <option value="sovereign" selected>সভরেন এলিট ($৪৯৯)</option>
-                                    <option value="custom">এম্পেররস কাস্টম ($৮৯৯+)</option>
-                                </select>
-                            </div>
-
-                            <!-- Gemstone -->
-                            <div>
-                                <label for="gemstone" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">রত্ন পাথর পছন্দ করুন</label>
-                                <select id="gemstone" name="gemstone" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-3 text-sm text-slate-700 focus:outline-none focus:bg-white focus:border-amber-600 transition-all">
-                                    <option value="yemeni_aqeeq">ইয়ামেনী লাল আকিক</option>
-                                    <option value="persian_feroza">পার্সিয়ান ফিরোজা</option>
-                                    <option value="emerald">সবুজ পান্না</option>
-                                    <option value="black_onyx">কালো ওনিক্স (কালো আকিক)</option>
-                                    <option value="other">কাস্টম অনুরোধ...</option>
-                                </select>
-                            </div>
-
-                            <!-- Size -->
-                            <div>
-                                <label for="ring_size" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">আংটির সাইজ (US)</label>
-                                <select id="ring_size" name="ring_size" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-3 text-sm text-slate-700 focus:outline-none focus:bg-white focus:border-amber-600 transition-all">
-                                    <option value="unknown">আমার সাইজ জানা নেই</option>
-                                    @for($size = 7; $size <= 14; $size++)
-                                        <option value="{{ $size }}">US সাইজ {{ $size }}</option>
-                                        <option value="{{ $size }}.5">US সাইজ {{ $size }}.5</option>
-                                    @endfor
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Notes / Calligraphy -->
-                        <div>
-                            <label for="notes" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2 font-mono">ক্যালিগ্রাফি ও কাস্টমাইজেশন নোট</label>
-                            <textarea id="notes" name="notes" rows="4" placeholder="যে নামটি বা ক্যালিগ্রাফি খোদাই করতে চান তা লিখুন। গোল্ড ডিজাইন বা বিশেষ কোনো পাথর কাটিং থাকলে উল্লেখ করুন..." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all"></textarea>
-                        </div>
-
-                        <div class="pt-6 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-6">
-                            <span class="text-xs text-slate-500 leading-normal max-w-sm text-center sm:text-left">
-                                এই ফর্মটি জমা দিয়ে আপনি একটি কাস্টম ডিজাইন অনুরোধ করছেন। এই ধাপে কোনো পেমেন্ট সম্পন্ন হবে না।
-                            </span>
-                            <x-button type="submit" variant="primary" class="w-full sm:w-auto uppercase tracking-wider text-xs shadow-lg shadow-amber-500/25">
-                                অর্ডারের জন্য সাবমিট করুন
-                            </x-button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
+            </form>
         </div>
     </div>
 </section>
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Bengali Digits Translator Helper
+        const EN_DIGITS = ['0','1','2','3','4','5','6','7','8','9'];
+        const BN_DIGITS = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+
+        function toBn(num) {
+            return String(num).split('').map(char => {
+                const idx = EN_DIGITS.indexOf(char);
+                return idx !== -1 ? BN_DIGITS[idx] : char;
+            }).join('');
+        }
+
+        // ── Gallery Slider ──
+        const mainImg = document.getElementById('gallery-main');
+        const thumbs = document.querySelectorAll('.gallery-thumb');
+        const prevBtn = document.getElementById('gallery-prev');
+        const nextBtn = document.getElementById('gallery-next');
+
+        if (thumbs.length > 0) {
+            let currentIndex = 0;
+            const images = Array.from(thumbs).map(t => t.dataset.src);
+
+            function updateActiveThumb(index) {
+                thumbs.forEach((thumb, idx) => {
+                    if (idx === index) {
+                        thumb.classList.remove('border-slate-200');
+                        thumb.classList.add('border-amber-600', 'border-2');
+                    } else {
+                        thumb.classList.remove('border-amber-600', 'border-2');
+                        thumb.classList.add('border-slate-200', 'border');
+                    }
+                });
+            }
+
+            function setIndex(index) {
+                currentIndex = (index + images.length) % images.length;
+                if (mainImg) {
+                    mainImg.src = images[currentIndex];
+                }
+                updateActiveThumb(currentIndex);
+            }
+
+            thumbs.forEach((thumb, idx) => {
+                thumb.addEventListener('click', () => {
+                    setIndex(idx);
+                });
+            });
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    setIndex(currentIndex - 1);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    setIndex(currentIndex + 1);
+                });
+            }
+        }
+
+        // ── Quantity & Total Price Calculations ──
+        const qtyMinus = document.getElementById('qty-minus');
+        const qtyPlus = document.getElementById('qty-plus');
+        const qtyInput = document.getElementById('qty-input');
+        const totalPriceEl = document.getElementById('total-price');
+        const unitPrice = 1950;
+
+        function updatePrice() {
+            if (!qtyInput || !totalPriceEl) return;
+            const qty = parseInt(qtyInput.value) || 1;
+            const total = unitPrice * qty;
+            totalPriceEl.textContent = toBn(total);
+        }
+
+        if (qtyMinus && qtyPlus && qtyInput) {
+            qtyMinus.addEventListener('click', () => {
+                let val = parseInt(qtyInput.value) || 1;
+                if (val > 1) {
+                    qtyInput.value = val - 1;
+                    updatePrice();
+                }
+            });
+
+            qtyPlus.addEventListener('click', () => {
+                let val = parseInt(qtyInput.value) || 1;
+                if (val < 10) {
+                    qtyInput.value = val + 1;
+                    updatePrice();
+                }
+            });
+        }
+
+        // Initial Price Load
+        updatePrice();
+    });
+</script>
+@endpush

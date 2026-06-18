@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Benefit;
+use App\Models\GalleryItem;
 use App\Models\HeroSection;
-use Illuminate\Http\Request;
 
 class LandingController extends Controller
 {
     public function index()
     {
         $hero = HeroSection::getSingleton();
-        return view('landing.index', compact('hero'));
+        $benefits = Benefit::orderBy('sort_order')->orderBy('id')->get();
+        $galleryItems = GalleryItem::orderBy('sort_order')->orderBy('id')->get();
+
+        return view('landing.index', compact('hero', 'benefits', 'galleryItems'));
     }
 }
