@@ -5,8 +5,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <x-section-title 
-            title="Voices of the Guardians" 
-            subtitle="Verified Testimonials" 
+            title="গ্রাহকদের সন্তুষ্টির অভিজ্ঞতা" 
+            subtitle="যাচাইকৃত রিভিউজ" 
             align="center"
         />
 
@@ -25,20 +25,20 @@
 
                 <!-- Review text -->
                 <blockquote class="text-sm text-slate-600 leading-relaxed font-sans italic mb-6">
-                    "The weight and details on my Yemeni Aqeeq ring are outstanding. The hand-engraved Arabic script inside is perfect and matches exactly what I requested. Shipped fast and came in a premium wooden chest."
+                    "আমার ইয়ামেনী আকিক আংটির ওজন এবং ফিনিশিং অসাধারণ। আংটির ভেতরের কাস্টম ক্যালিগ্রাফি খোদাইটি আমার চাহিদা অনুযায়ী নিখুঁত হয়েছে। চমৎকার কাঠের বক্সে দ্রুত ডেলিভারি পেয়েছি।"
                 </blockquote>
 
                 <!-- Reviewer -->
                 <div class="flex items-center justify-between border-t border-slate-200/60 pt-4">
                     <div>
-                        <h4 class="font-serif text-sm font-semibold text-slate-900">Tariq Al-Jamil</h4>
-                        <p class="text-[10px] text-slate-500 mt-0.5 font-semibold">Medina, Saudi Arabia</p>
+                        <h4 class="font-serif text-sm font-semibold text-slate-900">তারিক আল-জামিল</h4>
+                        <p class="text-[10px] text-slate-500 mt-0.5 font-semibold">মদিনা, সৌদি আরব</p>
                     </div>
                     <div class="text-right">
                         <span class="inline-flex items-center gap-1 text-[9px] text-emerald-700 font-bold uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
-                            Verified Owner
+                            যাচাইকৃত ক্রেতা
                         </span>
-                        <p class="text-[8px] text-slate-550 mt-1 uppercase font-semibold">Royal Al-Khatam</p>
+                        <p class="text-[8px] text-slate-550 mt-1 uppercase font-semibold">রয়্যাল আল-খাতাম</p>
                     </div>
                 </div>
             </div>
@@ -56,20 +56,20 @@
 
                 <!-- Review text -->
                 <blockquote class="text-sm text-slate-600 leading-relaxed font-sans italic mb-6">
-                    "Excellent customer service from the beginning. Sizing guide was very precise, and the ring fits perfectly on my right hand. The Persian Feroza stone is spectacular—it has a deep sky blue that photos can't do justice."
+                    "প্রথম থেকেই তাদের কাস্টমার সার্ভিস ছিল চমৎকার। সাইজিং গাইড খুবই নির্ভুল ছিল, আংটিটি আমার আঙুলে দারুণভাবে মানিয়ে গেছে। নিশাপুর ফিরোজা পাথরটি দেখতে ভীষণ উজ্জ্বল ও সুন্দর!"
                 </blockquote>
 
                 <!-- Reviewer -->
                 <div class="flex items-center justify-between border-t border-slate-200/60 pt-4">
                     <div>
-                        <h4 class="font-serif text-sm font-semibold text-slate-900">Hamza Yusuf</h4>
-                        <p class="text-[10px] text-slate-500 mt-0.5 font-semibold">London, United Kingdom</p>
+                        <h4 class="font-serif text-sm font-semibold text-slate-900">হামজা ইউসুফ</h4>
+                        <p class="text-[10px] text-slate-500 mt-0.5 font-semibold">লন্ডন, যুক্তরাজ্য</p>
                     </div>
                     <div class="text-right">
                         <span class="inline-flex items-center gap-1 text-[9px] text-emerald-700 font-bold uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
-                            Verified Owner
+                            যাচাইকৃত ক্রেতা
                         </span>
-                        <p class="text-[8px] text-slate-550 mt-1 uppercase font-semibold">Persian Neyshabur</p>
+                        <p class="text-[8px] text-slate-550 mt-1 uppercase font-semibold">পার্সিয়ান নিশাপুর</p>
                     </div>
                 </div>
             </div>
@@ -87,20 +87,20 @@
 
                 <!-- Review text -->
                 <blockquote class="text-sm text-slate-600 leading-relaxed font-sans italic mb-6">
-                    "A absolute masterpiece of calligraphic and silver craftsmanship. The weight of the 925 silver is satisfying, and the side engravings look very ancient. I recommend this workshop to anyone seeking true quality."
+                    "রুপা ও ক্যালিগ্রাফির অসাধারণ কারুকার্য। ৯২৫ সিলভারের ওজন বেশ ভারী ও মজবুত, এবং পাশের খোদাই ডিজাইনগুলো অত্যন্ত চমৎকার। প্রিমিয়াম কোয়ালিটির জন্য আমি তাদের অবশ্যই রেকমেন্ড করব।"
                 </blockquote>
 
                 <!-- Reviewer -->
                 <div class="flex items-center justify-between border-t border-slate-200/60 pt-4">
                     <div>
-                        <h4 class="font-serif text-sm font-semibold text-slate-900">Dr. Yaseen</h4>
-                        <p class="text-[10px] text-slate-500 mt-0.5 font-semibold">Istanbul, Turkey</p>
+                        <h4 class="font-serif text-sm font-semibold text-slate-900">ডঃ ইয়াসিন</h4>
+                        <p class="text-[10px] text-slate-500 mt-0.5 font-semibold">ইস্তাম্বুল, তুরস্ক</p>
                     </div>
                     <div class="text-right">
                         <span class="inline-flex items-center gap-1 text-[9px] text-emerald-700 font-bold uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
-                            Verified Owner
+                            যাচাইকৃত ক্রেতা
                         </span>
-                        <p class="text-[8px] text-slate-550 mt-1 uppercase font-semibold">Emerald Sovereign</p>
+                        <p class="text-[8px] text-slate-550 mt-1 uppercase font-semibold">এমেরাল্ড সভরেন</p>
                     </div>
                 </div>
             </div>

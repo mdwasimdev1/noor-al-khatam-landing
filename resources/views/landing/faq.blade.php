@@ -5,8 +5,8 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <x-section-title 
-            title="Frequently Inquired Questions" 
-            subtitle="Details & Guidance" 
+            title="সাধারণ জিজ্ঞাসিত প্রশ্নাবলী" 
+            subtitle="বিস্তারিত তথ্য ও নির্দেশিকা" 
             align="center"
         />
 
@@ -16,14 +16,14 @@
             <details class="group rounded-xl border border-slate-200 bg-slate-50/60 p-6 [&_summary::-webkit-details-marker]:hidden" open>
                 <summary class="flex justify-between items-center w-full cursor-pointer select-none text-left list-none">
                     <h3 class="font-serif text-base md:text-lg font-semibold text-slate-900 group-open:text-amber-600 transition-colors duration-200">
-                        Are the gemstones genuine and natural?
+                        রত্ন পাথরগুলো কি আসলেই আসল এবং প্রাকৃতিক?
                     </h3>
                     <span class="text-slate-500 group-open:rotate-180 transition-transform duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </span>
                 </summary>
                 <div class="mt-4 text-slate-650 text-sm leading-relaxed border-t border-slate-200/60 pt-4 font-sans">
-                    Yes. All gemstones used in our workshops (including Yemeni Aqeeq, Persian Feroza, and Colombian Zamurrad) are 100% natural, genuine, and ethically sourced. We do not use lab-grown, synthetic, or glass-filled stones. All Sovereign and Emperor tier rings ship with a physical Certificate of Authenticity verifying the gemstone's origin.
+                    হ্যাঁ। আমাদের ওয়ার্কশপে ব্যবহৃত প্রতিটি রত্ন পাথর (ইয়ামেনী আকিক, পার্সিয়ান ফিরোজা এবং সবুজ পান্না সহ) ১০০% প্রাকৃতিক এবং আসল। আমরা কোনো কৃত্রিম বা ল্যাবে তৈরি পাথর ব্যবহার করি না। সভরেন এবং এম্পেরর ক্যাটাগরির প্রতিটি আংটির সাথে পাথরের সত্যতার একটি সার্টিফিকেট প্রদান করা হয়।
                 </div>
             </details>
 
@@ -31,14 +31,14 @@
             <details class="group rounded-xl border border-slate-200 bg-slate-50/60 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex justify-between items-center w-full cursor-pointer select-none text-left list-none">
                     <h3 class="font-serif text-base md:text-lg font-semibold text-slate-900 group-open:text-amber-600 transition-colors duration-200">
-                        How do I determine my correct ring size?
+                        আমি কীভাবে আমার আংটির সঠিক মাপ নির্ধারণ করব?
                     </h3>
                     <span class="text-slate-500 group-open:rotate-180 transition-transform duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </span>
                 </summary>
                 <div class="mt-4 text-slate-650 text-sm leading-relaxed border-t border-slate-200/60 pt-4 font-sans">
-                    We follow standard US sizing. You can refer to our downloadable sizing guide on this page, or measure the inside diameter of an existing ring. Alternatively, you can contact our concierge, and we will mail you a complimentary physical plastic ring sizing tool to your home to ensure a perfect fit.
+                    আমরা স্ট্যান্ডার্ড ইউএস (US) সাইজিং অনুসরণ করি। আপনি আমাদের সাইজ নির্দেশিকা দেখতে পারেন অথবা আপনার কাছে থাকা আংটির ভেতরের ব্যাস পরিমাপ করতে পারেন। এছাড়া, আপনি অনুরোধ জানালে আংটির সঠিক মাপ নিশ্চিত করতে আমরা বিনামূল্যে একটি প্লাস্টিক রিং সাইজার আপনার ঠিকানায় পাঠিয়ে দেব।
                 </div>
             </details>
 
@@ -46,14 +46,14 @@
             <details class="group rounded-xl border border-slate-200 bg-slate-50/60 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex justify-between items-center w-full cursor-pointer select-none text-left list-none">
                     <h3 class="font-serif text-base md:text-lg font-semibold text-slate-900 group-open:text-amber-600 transition-colors duration-200">
-                        Can I customize the calligraphy inscription?
+                        আমি কি ক্যালিগ্রাফি খোদাই কাস্টমাইজ করতে পারব?
                     </h3>
                     <span class="text-slate-500 group-open:rotate-180 transition-transform duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </span>
                 </summary>
                 <div class="mt-4 text-slate-650 text-sm leading-relaxed border-t border-slate-200/60 pt-4 font-sans">
-                    Absolutely. The Sovereign Elite and Emperor's Custom packages allow you to specify personalized texts (monograms, names, important dates, or meaningful verses) to be hand-engraved on either the inside of the band, the outer silver frame, or in some cases, the surface of the gemstone itself. We support Arabic, English, Latin, and Turkish calligraphy.
+                    অবশ্যই। আমাদের সভরেন এলিট এবং এম্পেরর কাস্টম প্যাকেজে আপনি আংটির ব্যান্ডে, পাশে বা পাথরের উপর আপনার পছন্দের নাম, মনোগ্রাম, বিশেষ তারিখ বা ক্যালিগ্রাফি খোদাই করে নিতে পারেন। আমরা আরবি, ইংরেজি ও বাংলা ক্যালিগ্রাফি সাপোর্ট করি।
                 </div>
             </details>
 
@@ -61,14 +61,14 @@
             <details class="group rounded-xl border border-slate-200 bg-slate-50/60 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex justify-between items-center w-full cursor-pointer select-none text-left list-none">
                     <h3 class="font-serif text-base md:text-lg font-semibold text-slate-900 group-open:text-amber-600 transition-colors duration-200">
-                        What is your resizing & refund policy?
+                        আংটির মাপ ঠিক না হলে বা ফেরত দেওয়ার নিয়ম কী?
                     </h3>
                     <span class="text-slate-500 group-open:rotate-180 transition-transform duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </span>
                 </summary>
                 <div class="mt-4 text-slate-650 text-sm leading-relaxed border-t border-slate-200/60 pt-4 font-sans">
-                    We offer a **Lifetime Fit Guarantee**. If your ring doesn't fit perfectly when it arrives, contact us within 30 days and we will arrange a return and resize it or replace it for you completely free of charge. For custom-made pieces (Sovereign/Emperor), since they are bespoke, we do not issue full refunds, but we work tirelessly with you to modify the ring until it meets your expectations.
+                    আমরা দিচ্ছি **লাইফটাইম ফিট গ্যারান্টি**। আংটি পাওয়ার পর সাইজে কোনো সমস্যা হলে ৩০ দিনের মধ্যে আমাদের সাথে যোগাযোগ করুন, আমরা বিনামূল্যে সেটি পরিবর্তন বা রিসাইজ করে দেব। যেহেতু কাস্টম আংটিগুলো সম্পূর্ণ আপনার অর্ডারে তৈরি করা হয়, তাই এতে ক্যাশব্যাক প্রযোজ্য নয়, তবে আপনার পছন্দ অনুযায়ী আংটিটি নিখুঁত না হওয়া পর্যন্ত আমরা পরিবর্তন করে দেব।
                 </div>
             </details>
 
@@ -76,14 +76,14 @@
             <details class="group rounded-xl border border-slate-200 bg-slate-50/60 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex justify-between items-center w-full cursor-pointer select-none text-left list-none">
                     <h3 class="font-serif text-base md:text-lg font-semibold text-slate-900 group-open:text-amber-600 transition-colors duration-200">
-                        How long does custom crafting and shipping take?
+                        আংটি তৈরি হতে এবং ডেলিভারি পেতে কতদিন সময় লাগে?
                     </h3>
                     <span class="text-slate-500 group-open:rotate-180 transition-transform duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </span>
                 </summary>
                 <div class="mt-4 text-slate-650 text-sm leading-relaxed border-t border-slate-200/60 pt-4 font-sans">
-                    Our standard Artisan Signature rings are crafted and dispatched within 3-5 business days. The Sovereign Elite takes approximately 7-14 business days due to complex hand-engraving. Bespoke Emperor designs may take 3-4 weeks. Once completed, all orders are shipped via insured DHL Express or FedEx, which typically takes 3-5 business days to deliver worldwide.
+                    আমাদের স্ট্যান্ডার্ড আর্টিসান সিগনেচার আংটিগুলো ৩-৫ কার্যদিবসের মধ্যে তৈরি করা হয়। সভরেন এলিট আংটিগুলোর নিখুঁত নকশা ও খোদাইয়ের জন্য ৭-১৪ কার্যদিবস সময় লাগে। এম্পেরর ডিজাইনের আংটিগুলোতে ৩-৪ সপ্তাহ পর্যন্ত সময় লাগতে পারে। শিপিংয়ের পর এক্সপ্রেস কুরিয়ারের মাধ্যমে ৩-৫ দিনের মধ্যে ডেলিভারি পাওয়া যায়।
                 </div>
             </details>
 
