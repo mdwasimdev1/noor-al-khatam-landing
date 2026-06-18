@@ -3,17 +3,17 @@
     <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <!-- Section Title Component -->
-        <x-section-title 
-            title="নূর আল খাতাম সিগনেচার স্ট্যান্ডার্ডস" 
+        <x-section-title
+            title="রাজমোহনী আংটির উপকারিতা"
             subtitle="কারুকার্যের শ্রেষ্ঠত্ব" 
             align="center"
         />
 
         <!-- Benefits Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
+
             <!-- Benefit 1: Authenticity -->
             <div class="group relative rounded-xl border border-slate-200/80 bg-slate-50/50 p-8 hover:bg-white hover:border-amber-500/40 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300">
                 <div class="w-12 h-12 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-100 transition-colors">

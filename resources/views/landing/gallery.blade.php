@@ -5,7 +5,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <x-section-title
-            title="আমাদের সিগনেচার কালেকশন"
+            title="রাজমোহিনী আংটি সকল রাশির নারী-পুরুষ ব্যবহার করতে পারবেন।"
             subtitle="রৌপ্যের শ্রেষ্ঠ স্মারক"
             align="center"
         />
@@ -13,7 +13,7 @@
         {{-- ========================================================
              PREMIUM IMAGE SLIDER
         ======================================================== --}}
-        <div class="relative w-full max-w-4xl mx-auto mb-20 group" id="gallerySlider">
+        <div class="relative w-full max-w-4xl mx-auto mb-10 group" id="gallerySlider">
 
             <!-- Slides Wrapper -->
             <div class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-2xl shadow-slate-300/50 bg-white"
@@ -121,13 +121,6 @@
                 <button data-dot="2"
                         class="slider-dot w-4 h-1.5 rounded-full bg-slate-300 hover:bg-amber-400 transition-all duration-300"
                         aria-label="স্লাইড ৩"></button>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="mt-4 max-w-xs mx-auto h-0.5 bg-slate-200 rounded-full overflow-hidden">
-                <div id="sliderProgress"
-                     class="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full transition-all duration-300"
-                     style="width: 33.333%"></div>
             </div>
 
         </div><!-- /gallerySlider -->
