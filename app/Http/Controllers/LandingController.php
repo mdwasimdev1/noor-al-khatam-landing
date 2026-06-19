@@ -12,7 +12,7 @@ class LandingController extends Controller
     {
         $hero = HeroSection::getSingleton();
         $benefits = Benefit::orderBy('sort_order')->orderBy('id')->get();
-        $galleryItems = GalleryItem::orderBy('sort_order')->orderBy('id')->get();
+        $galleryItems = GalleryItem::latest()->get();
 
         return view('landing.index', compact('hero', 'benefits', 'galleryItems'));
     }

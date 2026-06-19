@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Gallery Slide')
-@section('page-title', 'Edit Gallery Slide')
-@section('page-subtitle', 'Update the details and image for this gallery slide')
+@section('title', 'Edit Gallery Image')
+@section('page-title', 'Edit Gallery Image')
+@section('page-subtitle', 'Update the image for this gallery item')
 
 @section('content')
 <div class="mx-auto max-w-3xl">
@@ -20,79 +20,6 @@
         @csrf
         @method('PUT')
 
-        {{-- Title & Subtitle --}}
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden hover:border-amber-200 transition-all duration-200">
-            <div class="px-6 py-5 border-b border-slate-100 flex items-center gap-4 bg-slate-50/50">
-                <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-600 shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-slate-800 text-sm">Slide Details</h3>
-                    <p class="text-xs text-slate-500 mt-0.5">Title and subtitle shown in the gallery caption</p>
-                </div>
-            </div>
-            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                    <label for="title" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Title *</label>
-                    <input type="text" id="title" name="title" value="{{ old('title', $gallery->title) }}" required
-                           class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition">
-                    @error('title')<p class="text-xs text-red-600 mt-1">{{ $message }}</p>@enderror
-                </div>
-                <div>
-                    <label for="subtitle" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Subtitle *</label>
-                    <input type="text" id="subtitle" name="subtitle" value="{{ old('subtitle', $gallery->subtitle) }}" required
-                           class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition">
-                    @error('subtitle')<p class="text-xs text-red-600 mt-1">{{ $message }}</p>@enderror
-                </div>
-            </div>
-        </div>
-
-        {{-- Badge, Price, Sort --}}
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden hover:border-amber-200 transition-all duration-200">
-            <div class="px-6 py-5 border-b border-slate-100 flex items-center gap-4 bg-slate-50/50">
-                <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-600 shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"/>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-slate-800 text-sm">Badge & Pricing</h3>
-                    <p class="text-xs text-slate-500 mt-0.5">Badge label, color, price, and display order</p>
-                </div>
-            </div>
-            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                    <label for="badge" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Badge Text *</label>
-                    <input type="text" id="badge" name="badge" value="{{ old('badge', $gallery->badge) }}" required
-                           class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition">
-                    @error('badge')<p class="text-xs text-red-600 mt-1">{{ $message }}</p>@enderror
-                </div>
-                <div>
-                    <label for="badge_color" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Badge Color *</label>
-                    <select id="badge_color" name="badge_color"
-                            class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition">
-                        @foreach(['amber' => 'Amber (Gold)', 'emerald' => 'Emerald (Green)', 'sky' => 'Sky (Blue)', 'rose' => 'Rose (Pink)', 'violet' => 'Violet (Purple)', 'green' => 'Green'] as $val => $label)
-                            <option value="{{ $val }}" {{ old('badge_color', $gallery->badge_color) === $val ? 'selected' : '' }}>{{ $label }}</option>
-                        @endforeach
-                    </select>
-                    @error('badge_color')<p class="text-xs text-red-600 mt-1">{{ $message }}</p>@enderror
-                </div>
-                <div>
-                    <label for="price" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Price *</label>
-                    <input type="text" id="price" name="price" value="{{ old('price', $gallery->price) }}" required
-                           class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition">
-                    @error('price')<p class="text-xs text-red-600 mt-1">{{ $message }}</p>@enderror
-                </div>
-                <div>
-                    <label for="sort_order" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Display Order</label>
-                    <input type="number" id="sort_order" name="sort_order" value="{{ old('sort_order', $gallery->sort_order) }}" min="0"
-                           class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition">
-                </div>
-            </div>
-        </div>
-
         {{-- Image Upload --}}
         <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden hover:border-amber-200 transition-all duration-200">
             <div class="px-6 py-5 border-b border-slate-100 flex items-center gap-4 bg-slate-50/50">
@@ -102,7 +29,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-slate-800 text-sm">Slide Image</h3>
+                    <h3 class="font-semibold text-slate-800 text-sm">Gallery Image</h3>
                     <p class="text-xs text-slate-500 mt-0.5">Leave empty to keep the current image</p>
                 </div>
             </div>
@@ -126,7 +53,7 @@
                 <div class="space-y-2">
                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-600">Current Image</label>
                     <div class="aspect-square rounded-xl overflow-hidden border border-slate-200 bg-slate-50 p-1">
-                        <img id="edit-preview" src="{{ asset('images/' . $gallery->image) }}" alt="{{ $gallery->title }}"
+                        <img id="edit-preview" src="{{ asset('images/' . $gallery->image) }}" alt="Gallery image"
                              class="w-full h-full object-cover rounded-lg">
                     </div>
                     <p class="text-[11px] text-slate-500 text-center">
@@ -139,12 +66,12 @@
         {{-- Submit --}}
         <div class="flex items-center justify-between pt-2 border-t border-slate-200/60">
             <button type="submit" form="delete-gallery-item"
-                    onclick="return confirm('এই স্লাইডটি মুছে ফেলতে চান?')"
+                    onclick="return confirm('এই ছবিটি মুছে ফেলতে চান?')"
                     class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                     </svg>
-                    Delete This Slide
+                    Delete This Image
             </button>
             <button type="submit"
                     class="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 active:scale-[0.98] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-200 cursor-pointer">
