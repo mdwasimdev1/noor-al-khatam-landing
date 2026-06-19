@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BenefitController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HeroSectionController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\OrderController;
 use App\Http\Middleware\AdminMiddleware;
@@ -32,6 +33,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         // Benefits CRUD
         Route::resource('benefits', BenefitController::class)->except('show');
+
+        // Settings
+        Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
+        Route::put('/settings', [SettingsController::class, 'update'])->name('settings.update');
 
         // Order Management
         Route::resource('orders', AdminOrderController::class)->only(['index', 'show', 'update', 'destroy']);

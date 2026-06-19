@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Settings;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -10,8 +11,6 @@ use Illuminate\Support\Str;
 class OrderController extends Controller
 {
     private const PRODUCT_NAME = 'নূর আল খাতাম নকশা সোলেমানী আংটি';
-
-    private const UNIT_PRICE = 1950;
 
     public function store(Request $request): RedirectResponse
     {
@@ -25,7 +24,9 @@ class OrderController extends Controller
             'phone.regex' => 'সঠিক বাংলাদেশি মোবাইল নম্বর লিখুন।',
         ]);
 
+        $settings = Settings::getSingleton();
         $quantity = (int) $validated['quantity'];
+        $unitPrice = (int) $settings->price;
         $order = Order::create([
             'order_number' => $this->generateOrderNumber(),
             'customer_name' => $validated['name'],
@@ -34,9 +35,9 @@ class OrderController extends Controller
             'address' => $validated['address'],
             'product_name' => self::PRODUCT_NAME,
             'quantity' => $quantity,
-            'unit_price' => self::UNIT_PRICE,
+            'unit_price' => $unitPrice,
             'shipping_charge' => 0,
-            'total' => self::UNIT_PRICE * $quantity,
+            'total' => $unitPrice * $quantity,
             'status' => 'pending',
             'ip_address' => $request->ip(),
         ]);

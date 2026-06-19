@@ -7,6 +7,15 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 
+    @php
+        function toBnDigits($num) {
+            $en = ['0','1','2','3','4','5','6','7','8','9'];
+            $bn = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+            return str_replace($en, $bn, (string)$num);
+        }
+        $discountPercent = $settings->discount > $settings->price ? round((($settings->discount - $settings->price) / $settings->discount) * 100) : 0;
+    @endphp
+
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <!-- Centered Header -->
         <div class="text-center mb-8">
@@ -78,11 +87,13 @@
 
                         <div>
                                <!-- Pricing -->
-                            <div class="flex items-baseline gap-3 pt-1">
+                            <div class="flex items-baseline gap-3 pt-1 flex-wrap">
                                 <span class="text-xs font-semibold text-slate-500">Price:</span>
-                                <span class="text-2xl font-black text-[#d97706] font-mono">৳ <span id="unit-price">১৯৫০</span></span>
-                                <span class="text-sm text-slate-400 line-through font-mono">৳ ৩০০০</span>
-                                <span class="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide">35% OFF</span>
+                                <span class="text-2xl font-black text-[#d97706] font-mono">৳ <span id="unit-price">{{ toBnDigits($settings->price) }}</span></span>
+                                @if($settings->discount > $settings->price)
+                                    <span class="text-sm text-slate-400 line-through font-mono">৳ {{ toBnDigits($settings->discount) }}</span>
+                                    <span class="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide">{{ $discountPercent }}% OFF</span>
+                                @endif
                             </div>
 
                             <!-- Status -->
@@ -211,13 +222,13 @@
                             <!-- Total Price -->
                             <div class="flex items-center justify-between text-base font-bold text-slate-850">
                                 <span>টোটাল</span>
-                                <span class="text-lg font-black text-slate-900 font-mono">৳ <span id="total-price">১৯৫০</span></span>
+                                <span class="text-lg font-black text-slate-900 font-mono">৳ <span id="total-price">{{ toBnDigits($settings->price) }}</span></span>
                             </div>
 
                             <!-- Big Black Order Button -->
                             <button
                                 type="submit"
-                                class="w-full bg-black hover:bg-slate-900 active:scale-[0.99] text-white font-bold text-sm py-4 rounded-lg flex items-center justify-center gap-2 tracking-wide transition-all shadow-lg shadow-black/10 hover:shadow-black/20 cursor-pointer"
+                                class="w-full bg-amber-500 hover:bg-amber-600 active:scale-[0.99] text-black font-bold text-sm py-4 rounded-lg flex items-center justify-center gap-2 tracking-wide transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-500/40 cursor-pointer"
                             >
                                 <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
@@ -275,7 +286,7 @@
                 const thumb = thumbs[index];
                 const containerRect = thumbsContainer.getBoundingClientRect();
                 const thumbRect = thumb.getBoundingClientRect();
-                
+
                 if (thumbRect.left < containerRect.left || thumbRect.right > containerRect.right) {
                     thumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 }
@@ -314,7 +325,7 @@
         const qtyPlus = document.getElementById('qty-plus');
         const qtyInput = document.getElementById('qty-input');
         const totalPriceEl = document.getElementById('total-price');
-        const unitPrice = 1950;
+        const unitPrice = {{ $settings->price }};
 
         function updatePrice() {
             if (!qtyInput || !totalPriceEl) return;
