@@ -1,10 +1,4 @@
 <section id="benefits" class="relative py-24 bg-white overflow-hidden">
-    <!-- Top divider -->
-    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
-
-    <!-- Ambient glows -->
-    <div class="absolute -top-40 -right-40 w-125 h-125 rounded-full bg-amber-50 blur-3xl opacity-50 pointer-events-none"></div>
-    <div class="absolute -bottom-40 -left-40 w-125 h-125 rounded-full bg-emerald-50 blur-3xl opacity-40 pointer-events-none"></div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -41,16 +35,16 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-0">
 
                     @forelse($benefits as $benefit)
-                    <div class="group flex items-center gap-3.5 py-3.5 border-b border-slate-100 last:border-0 sm:nth-last-2:border-0 cursor-default hover:bg-amber-50/60 rounded-lg px-2 -mx-2 transition-colors duration-200">
+                    <div class="group flex items-center gap-3.5 py-3.5 border-b border-slate-100 last:border-0 sm:nth-last-2:border-0 cursor-default hover:bg-amber-50/60 rounded-md px-2 -mx-2 transition-colors duration-200">
                         <!-- Coloured dot -->
                         <span class="shrink-0 w-3 h-3 rounded-full {{ $benefit->color }} shadow-md {{ $benefit->shadow }} ring-2 ring-white group-hover:scale-110 transition-transform duration-200"></span>
                         <!-- Text -->
-                        <span class="text-sm text-slate-700 group-hover:text-slate-900 transition-colors duration-200 leading-snug font-sans">
+                        <span class="text-lg text-slate-700 group-hover:text-slate-900 transition-colors duration-200 leading-snug font-sans">
                             {{ $benefit->text }}
                         </span>
                     </div>
                     @empty
-                    <p class="sm:col-span-2 py-6 text-center text-sm text-slate-500">
+                    <p class="sm:col-span-2 py-6 text-center text-lg text-slate-500">
                         সুবিধাগুলো শীঘ্রই যোগ করা হবে।
                     </p>
                     @endforelse
@@ -60,7 +54,7 @@
                 <!-- Bottom CTA strip -->
                 <div class="mt-10 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#order-form"
-                       class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold tracking-wider uppercase px-6 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-amber-500/30 shrink-0">
+                       class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 text-lg font-bold tracking-wider uppercase px-6 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-amber-500/30 shrink-0">
                         এখনই অর্ডার করুন
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>

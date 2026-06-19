@@ -18,7 +18,19 @@
 
         <!-- Main Card Container -->
         <div class="bg-white border border-slate-200 rounded-2xl shadow-xl shadow-slate-100/50 p-6 sm:p-8">
-            <form action="#" method="POST" id="checkout-form" class="space-y-6">
+            @if(session('order_success'))
+                <div class="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-sm font-semibold text-emerald-800">
+                    {{ session('order_success') }}
+                </div>
+            @endif
+
+            @if($errors->any())
+                <div class="mb-6 rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-700">
+                    অর্ডারের তথ্যগুলো আবার যাচাই করুন।
+                </div>
+            @endif
+
+            <form action="{{ route('orders.store') }}" method="POST" id="checkout-form" class="space-y-6">
                 @csrf
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -99,7 +111,7 @@
                                         type="number"
                                         id="qty-input"
                                         name="quantity"
-                                        value="1"
+                                        value="{{ old('quantity', 1) }}"
                                         min="1"
                                         max="10"
                                         readonly
@@ -130,10 +142,12 @@
                                         type="text"
                                         id="name"
                                         name="name"
+                                        value="{{ old('name') }}"
                                         required
                                         placeholder="আপনার নাম লিখুন"
                                         class="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
                                     >
+                                    @error('name')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
                                 </div>
 
                                 <!-- Phone -->
@@ -143,10 +157,12 @@
                                         type="tel"
                                         id="phone"
                                         name="phone"
+                                        value="{{ old('phone') }}"
                                         required
                                         placeholder="আপনার মোবাইল নাম্বার লিখুন"
                                         class="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
                                     >
+                                    @error('phone')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
                                 </div>
 
                                 <!-- Division Select -->
@@ -158,16 +174,21 @@
                                         required
                                         class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm text-slate-700 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
                                     >
-                                        <option value="" disabled selected>বিভাগ সিলেক্ট করুন</option>
-                                        <option value="Dhaka">Dhaka (ঢাকা)</option>
-                                        <option value="Chattogram">Chattogram (চট্টগ্রাম)</option>
-                                        <option value="Rajshahi">Rajshahi (রাজশাহী)</option>
-                                        <option value="Khulna">Khulna (খুলনা)</option>
-                                        <option value="Barishal">Barishal (বরিশাল)</option>
-                                        <option value="Sylhet">Sylhet (সিলেট)</option>
-                                        <option value="Rangpur">Rangpur (রংপুর)</option>
-                                        <option value="Mymensingh">Mymensingh (ময়মনসিংহ)</option>
+                                        <option value="" disabled {{ old('division') ? '' : 'selected' }}>বিভাগ সিলেক্ট করুন</option>
+                                        @foreach([
+                                            'Dhaka' => 'Dhaka (ঢাকা)',
+                                            'Chattogram' => 'Chattogram (চট্টগ্রাম)',
+                                            'Rajshahi' => 'Rajshahi (রাজশাহী)',
+                                            'Khulna' => 'Khulna (খুলনা)',
+                                            'Barishal' => 'Barishal (বরিশাল)',
+                                            'Sylhet' => 'Sylhet (সিলেট)',
+                                            'Rangpur' => 'Rangpur (রংপুর)',
+                                            'Mymensingh' => 'Mymensingh (ময়মনসিংহ)',
+                                        ] as $value => $label)
+                                            <option value="{{ $value }}" {{ old('division') === $value ? 'selected' : '' }}>{{ $label }}</option>
+                                        @endforeach
                                     </select>
+                                    @error('division')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
                                 </div>
 
                                 <!-- Address -->
@@ -177,10 +198,12 @@
                                         type="text"
                                         id="address"
                                         name="address"
+                                        value="{{ old('address') }}"
                                         required
                                         placeholder="গ্রাম/মহল্লা, ইউনিয়ন, থানা, জেলা"
                                         class="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all bg-white"
                                     >
+                                    @error('address')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
                                 </div>
                             </div>
                         </div>

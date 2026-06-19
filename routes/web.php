@@ -4,12 +4,17 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BenefitController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HeroSectionController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\OrderController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 // Landing Page
 Route::get('/', [LandingController::class, 'index'])->name('landing');
+Route::post('/orders', [OrderController::class, 'store'])
+    ->middleware('throttle:10,1')
+    ->name('orders.store');
 
 // Admin Auth
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -27,5 +32,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         // Benefits CRUD
         Route::resource('benefits', BenefitController::class)->except('show');
+
+        // Order Management
+        Route::resource('orders', AdminOrderController::class)->only(['index', 'show', 'update', 'destroy']);
     });
 });

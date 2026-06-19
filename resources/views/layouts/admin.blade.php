@@ -619,6 +619,13 @@
                 Benefits
             </a>
 
+            <a href="{{ route('admin.orders.index') }}" class="nav-item {{ request()->routeIs('admin.orders.*') ? 'active' : '' }}">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 3h14m-10 4a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"/>
+                </svg>
+                Orders
+            </a>
+
             <div class="nav-section-label" style="margin-top:8px;">System</div>
 
             <a href="{{ route('landing') }}" target="_blank" class="nav-item">
