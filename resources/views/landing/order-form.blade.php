@@ -39,52 +39,41 @@
                     <div class="lg:col-span-6 space-y-6">
                         <!-- Product Gallery Mockup -->
                         <div>
-                            <div class="relative aspect-square rounded-xl overflow-hidden border border-slate-200/80 bg-white p-0.5 shadow-sm">
-                                <img
-                                    id="gallery-main"
-                                    src="{{ asset('images/ring_hero.png') }}"
-                                    alt="নূর আল খাতাম নকশা সোলেমানী আংটি"
-                                    class="w-full h-full object-cover rounded-lg transition-all duration-300"
-                                >
-                            </div>
-
-                            <!-- Thumbnail Slider -->
-                            <div class="relative mt-4 flex items-center justify-center px-8">
-                                <button type="button" id="gallery-prev" class="absolute left-0 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-400 hover:shadow-md transition-all z-10 cursor-pointer">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
-                                    </svg>
-                                </button>
-
-                                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="thumbnails-container">
-                                    <!-- Thumb 1 -->
-                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border-2 border-amber-600 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_hero.png') }}">
-                                        <img src="{{ asset('images/ring_hero.png') }}" class="w-full h-full object-cover">
-                                    </div>
-                                    <!-- Thumb 2 -->
-                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_turquoise.png') }}">
-                                        <img src="{{ asset('images/ring_turquoise.png') }}" class="w-full h-full object-cover">
-                                    </div>
-                                    <!-- Thumb 3 -->
-                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_emerald.png') }}">
-                                        <img src="{{ asset('images/ring_emerald.png') }}" class="w-full h-full object-cover">
-                                    </div>
-                                    <!-- Thumb 4 -->
-                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_hero.png') }}">
-                                        <img src="{{ asset('images/ring_hero.png') }}" class="w-full h-full object-cover">
-                                    </div>
-                                    <!-- Thumb 5 -->
-                                    <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border border-slate-200 cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/ring_turquoise.png') }}">
-                                        <img src="{{ asset('images/ring_turquoise.png') }}" class="w-full h-full object-cover">
-                                    </div>
+                            @if($galleryItems->isNotEmpty())
+                                <div class="relative aspect-square rounded-xl overflow-hidden border border-slate-200/80 bg-white p-0.5 shadow-sm">
+                                    <img
+                                        id="gallery-main"
+                                        src="{{ asset('images/' . $galleryItems->first()->image) }}"
+                                        alt="প্রোডাক্ট"
+                                        class="w-full h-full object-cover rounded-lg transition-all duration-300"
+                                    >
                                 </div>
 
-                                <button type="button" id="gallery-next" class="absolute right-0 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-400 hover:shadow-md transition-all z-10 cursor-pointer">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </button>
-                            </div>
+                                @if($galleryItems->count() > 1)
+                                    <!-- Thumbnail Slider -->
+                                    <div class="relative mt-4 flex items-center justify-center px-8">
+                                        <button type="button" id="gallery-prev" class="absolute left-0 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-400 hover:shadow-md transition-all z-10 cursor-pointer">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                                            </svg>
+                                        </button>
+
+                                        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="thumbnails-container">
+                                            @foreach($galleryItems as $item)
+                                                <div class="gallery-thumb w-14 h-14 rounded-md overflow-hidden border {{ $loop->first ? 'border-2 border-amber-600' : 'border border-slate-200' }} cursor-pointer shrink-0 shadow-sm transition-all" data-src="{{ asset('images/' . $item->image) }}">
+                                                    <img src="{{ asset('images/' . $item->image) }}" class="w-full h-full object-cover">
+                                                </div>
+                                            @endforeach
+                                        </div>
+
+                                        <button type="button" id="gallery-next" class="absolute right-0 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-400 hover:shadow-md transition-all z-10 cursor-pointer">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                @endif
+                            @endif
                         </div>
 
                         <div>
@@ -263,6 +252,7 @@
         const thumbs = document.querySelectorAll('.gallery-thumb');
         const prevBtn = document.getElementById('gallery-prev');
         const nextBtn = document.getElementById('gallery-next');
+        const thumbsContainer = document.getElementById('thumbnails-container');
 
         if (thumbs.length > 0) {
             let currentIndex = 0;
@@ -271,7 +261,7 @@
             function updateActiveThumb(index) {
                 thumbs.forEach((thumb, idx) => {
                     if (idx === index) {
-                        thumb.classList.remove('border-slate-200');
+                        thumb.classList.remove('border-slate-200', 'border');
                         thumb.classList.add('border-amber-600', 'border-2');
                     } else {
                         thumb.classList.remove('border-amber-600', 'border-2');
@@ -280,12 +270,24 @@
                 });
             }
 
+            function scrollThumbIntoView(index) {
+                if (!thumbsContainer || !thumbs[index]) return;
+                const thumb = thumbs[index];
+                const containerRect = thumbsContainer.getBoundingClientRect();
+                const thumbRect = thumb.getBoundingClientRect();
+                
+                if (thumbRect.left < containerRect.left || thumbRect.right > containerRect.right) {
+                    thumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            }
+
             function setIndex(index) {
                 currentIndex = (index + images.length) % images.length;
                 if (mainImg) {
                     mainImg.src = images[currentIndex];
                 }
                 updateActiveThumb(currentIndex);
+                scrollThumbIntoView(currentIndex);
             }
 
             thumbs.forEach((thumb, idx) => {
