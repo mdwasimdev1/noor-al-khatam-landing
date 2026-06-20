@@ -30,11 +30,11 @@
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-16 h-16 rounded-md border border-amber-400 flex items-center justify-center">
                     <!-- Geometric Logo Icon -->
-                    <img src="{{ asset('images/ring_hero.png') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
+                    <img src="{{ asset('images/ring_hero.jpeg') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
                 </div>
                 <div class="flex flex-col">
                     <span class="font-serif text-lg sm:text-xl font-bold tracking-widest text-slate-900 uppercase leading-none">
-                        Noor Al Khatam
+                        Noorani Rings
                     </span>
                     <span class="text-sm font-sans tracking-[0.3em] uppercase text-amber-600 font-semibold mt-1">
                         আংটির রাজকীয় আলো
@@ -55,13 +55,13 @@
             <!-- About -->
             <div class="md:col-span-2">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
-                       <img src="{{ asset('images/ring_hero.png') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
+                    <div class="w-20 h-20 rounded bg-amber-500 flex items-center justify-center">
+                       <img src="{{ asset('images/ring_hero.jpeg') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
                     </div>
-                    <span class="font-serif text-lg font-bold tracking-widest text-slate-900 uppercase">নূর আল খাতাম</span>
+                    <span class="font-serif text-lg font-bold tracking-widest text-slate-900 uppercase">নূরানি আংটি</span>
                 </div>
                 <p class="text-sm text-slate-500 max-w-sm mb-6 leading-relaxed">
-                    শতবর্ষ প্রাচীন রৌপ্য ও রত্ন পাথর খোদাইয়ের ঐতিহ্য ধরে রেখে আমরা কাজ করি। আধ্যাত্মিক মহিমা এবং ব্যক্তিগত ঐতিহ্যের স্মারক হিসেবে আমরা ৯২৫ স্টার্লিং সিলভারের আংটি তৈরি করি।
+                    শতবর্ষ প্রাচীন রৌপ্য ও রত্ন পাথর খোদাইয়ের ঐতিহ্য ধরে রেখে আমরা কাজ করি। আধ্যাত্মিক মহিমা এবং ব্যক্তিগত ঐতিহ্যের স্মারক হিসেবে আমরা ৯২৫ স্টার্লিং সিলভারের আংটি তৈরি করি।
                 </p>
             </div>
 
@@ -98,7 +98,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200 pt-8 text-center text-xs mt-5">
-            <p>&copy; 2026 নূর আল খাতাম। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p>&copy; 2026 নূরানি আংটি। সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
     </footer>
 
