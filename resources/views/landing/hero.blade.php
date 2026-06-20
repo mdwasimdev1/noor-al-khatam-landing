@@ -9,7 +9,7 @@
 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-slate-900 leading-[1.15] tracking-wide mb-6">
                     {{ $hero->heading_line1 }} <br>
-                    <span class="bg-gradient-to-r from-amber-700 via-amber-500 to-amber-800 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(245,158,11,0.1)]">
+                    <span class="text-xl bg-gradient-to-r from-amber-700 via-amber-500 to-amber-800 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(245,158,11,0.1)]">
                         {{ $hero->heading_line2 }}
                     </span>
                 </h1>
