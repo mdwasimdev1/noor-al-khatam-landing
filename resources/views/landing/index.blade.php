@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Noor Al Khatam | Mastercrafted Gemstone Sterling Silver Rings')
+@section('title', 'নূরানি আংটি | Mastercrafted Gemstone Sterling Silver Rings')
 
 @section('content')
     @include('landing.hero')

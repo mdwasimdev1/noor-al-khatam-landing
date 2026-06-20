@@ -3,16 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="নূর আল খাতাম - কাস্টম হস্তনির্মিত ৯২৫ স্টার্লিং সিলভার এবং আসল রত্ন পাথরের আংটি। আপনার আধ্যাত্মিক ব্যক্তিত্ব ও ঐতিহ্যের প্রকাশ।">
-    <meta name="keywords" content="হস্তনির্মিত আংটি, স্টার্লিং সিলভার, আকিক আংটি, ফিরোজা পাথর, কাস্টম আংটি">
-    <meta name="author" content="Noor Al Khatam">
+    <meta name="description" content="নূরানি আংটি - কাস্টম হস্তনির্মিত ৯২৫ স্টার্লিং সিলভার এবং আসল রত্ন পাথরের আংটি। আপনার আধ্যাত্মিক ব্যক্তিত্ব ও ঐতিহ্যের প্রকাশ।">
+    <meta name="keywords" content="হস্তনির্মিত আংটি, স্টার্লিং সিলভার, আকিক আংটি, ফিরোজা পাথর, কাস্টম आङ्गटी">
+    <meta name="author" content="Noorani Rings">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="নূর আল খাতাম | ঐতিহ্যবাহী আসল পাথরের সিলভার আংটি">
-    <meta property="og:description" content="খাঁটি ৯২৫ স্টার্লিং সিলভারের উপর কাস্টম ক্যালিগ্রাফি এবং আসল ইয়ামেনী লাল আকিক ও ফিরোজা পাথরের রাজকীয় আংটি সংগ্রহ।">
+    <meta property="og:title" content="নূরানি আংটি | ঐতিহ্যবাহী आसल पाथरेर सिल्वर आङ्गटी">
+    <meta property="og:description" content="খাঁটি ৯২৫ স্টার্লিং সিলভারের उपर कास्टम कैलिग्राफी एবং आसल इয়ামেনী লাল আকিক ও ফিরোজা পাথরের রাজকীয় আংটি সংগ্রহ।">
 
-    <title>@yield('title', 'নূর আল খাতাম | ঐতিহ্যবাহী আসল পাথরের সিলভার আংটি')</title>
+    <title>@yield('title', 'নূরানি আংটি | ঐতিহ্যবাহী আসল রত্ন পাথরের আংটি')</title>
+
+    <link rel="shortcut icon" href="{{ asset('images/ring_hero.jpeg') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/ring_hero.jpeg') }}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
