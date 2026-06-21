@@ -22,11 +22,8 @@ class HeroSectionController extends Controller
             'subheading'    => ['required', 'string', 'max:1000'],
             'cta_text'      => ['required', 'string', 'max:100'],
             'cta_link'      => ['required', 'string', 'max:255'],
-            'stat1_value'   => ['required', 'string', 'max:50'],
             'stat1_label'   => ['required', 'string', 'max:100'],
-            'stat2_value'   => ['required', 'string', 'max:50'],
             'stat2_label'   => ['required', 'string', 'max:100'],
-            'stat3_value'   => ['required', 'string', 'max:50'],
             'stat3_label'   => ['required', 'string', 'max:100'],
             'hero_image'    => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:5120'],
         ]);

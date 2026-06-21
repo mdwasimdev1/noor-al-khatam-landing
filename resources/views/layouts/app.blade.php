@@ -33,7 +33,7 @@
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-16 h-16 rounded-md border border-amber-400 flex items-center justify-center">
                     <!-- Geometric Logo Icon -->
-                    <img src="{{ asset('images/ring_hero.jpeg') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
+                    <img src="{{ asset('images/logo.jpeg') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
                 </div>
                 <div class="flex flex-col">
                     <span class="font-serif text-lg sm:text-xl font-bold tracking-widest text-slate-900 uppercase leading-none">
@@ -59,12 +59,12 @@
             <div class="md:col-span-2">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-20 h-20 rounded bg-amber-500 flex items-center justify-center">
-                       <img src="{{ asset('images/ring_hero.jpeg') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
+                       <img src="{{ asset('images/logo.jpeg') }}" alt="নূর আল খাতাম লোগো" class="w-full h-full object-contain rounded-md">
                     </div>
                     <span class="font-serif text-lg font-bold tracking-widest text-slate-900 uppercase">নূরানি আংটি</span>
                 </div>
                 <p class="text-sm text-slate-500 max-w-sm mb-6 leading-relaxed">
-                   ভাগ্যকে অনুসরণ নয়, এবার ঘুরিয়ে দিন নিজের দিকে — নূরানি আংটি 
+                   ভাগ্যকে অনুসরণ নয়, এবার ঘুরিয়ে দিন নিজের দিকে — নূরানি আংটি
                 </p>
             </div>
 

@@ -96,7 +96,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                     {{-- Stat 1 --}}
                     <div class="bg-slate-50/70 border border-slate-200/60 rounded-xl p-4 space-y-4">
-                        <div>
+                        {{-- <div>
                             <label for="stat1_value" class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">Stat 1 — Value</label>
                             <input
                                 type="text"
@@ -107,7 +107,7 @@
                                 placeholder="১০০%"
                             >
                             @error('stat1_value')<div class="text-xs text-red-600 mt-1 font-medium">{{ $message }}</div>@enderror
-                        </div>
+                        </div> --}}
                         <div>
                             <label for="stat1_label" class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">Stat 1 — Label</label>
                             <input
@@ -124,7 +124,7 @@
 
                     {{-- Stat 2 --}}
                     <div class="bg-slate-50/70 border border-slate-200/60 rounded-xl p-4 space-y-4">
-                        <div>
+                        {{-- <div>
                             <label for="stat2_value" class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">Stat 2 — Value</label>
                             <input
                                 type="text"
@@ -135,7 +135,7 @@
                                 placeholder="৯২৫"
                             >
                             @error('stat2_value')<div class="text-xs text-red-600 mt-1 font-medium">{{ $message }}</div>@enderror
-                        </div>
+                        </div> --}}
                         <div>
                             <label for="stat2_label" class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">Stat 2 — Label</label>
                             <input
@@ -152,7 +152,7 @@
 
                     {{-- Stat 3 --}}
                     <div class="bg-slate-50/70 border border-slate-200/60 rounded-xl p-4 space-y-4">
-                        <div>
+                        {{-- <div>
                             <label for="stat3_value" class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">Stat 3 — Value</label>
                             <input
                                 type="text"
@@ -163,7 +163,7 @@
                                 placeholder="ফ্রি"
                             >
                             @error('stat3_value')<div class="text-xs text-red-600 mt-1 font-medium">{{ $message }}</div>@enderror
-                        </div>
+                        </div> --}}
                         <div>
                             <label for="stat3_label" class="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">Stat 3 — Label</label>
                             <input
