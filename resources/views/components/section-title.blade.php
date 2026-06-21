@@ -15,11 +15,11 @@
             {{ $subtitle }}
         </span>
     @endif
-    
-    <h2 class="text-3xl md:text-5xl font-bold font-serif text-slate-900 tracking-wide leading-tight">
+
+    <h2 class="text-xl md:text-2xl font-bold font-serif text-amber-500 tracking-wide leading-tight">
         {{ $title }}
     </h2>
-    
+
     <div class="mt-4 flex items-center gap-2">
         <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-amber-600/60"></span>
         <span class="w-1.5 h-1.5 rotate-45 bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]"></span>

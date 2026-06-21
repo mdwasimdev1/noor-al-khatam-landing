@@ -17,7 +17,6 @@
                 <dl class="grid grid-cols-1 sm:grid-cols-2 gap-5 p-6 text-sm">
                     <div><dt class="text-xs text-slate-500">Customer</dt><dd class="mt-1 font-semibold text-slate-800">{{ $order->customer_name }}</dd></div>
                     <div><dt class="text-xs text-slate-500">Phone</dt><dd class="mt-1 font-semibold"><a class="text-amber-700" href="tel:{{ $order->phone }}">{{ $order->phone }}</a></dd></div>
-                    <div><dt class="text-xs text-slate-500">Division</dt><dd class="mt-1 font-semibold text-slate-800">{{ $order->division }}</dd></div>
                     <div class="sm:col-span-2"><dt class="text-xs text-slate-500">Address</dt><dd class="mt-1 text-slate-800 leading-relaxed">{{ $order->address }}</dd></div>
                 </dl>
             </div>

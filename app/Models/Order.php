@@ -19,7 +19,6 @@ class Order extends Model
         'order_number',
         'customer_name',
         'phone',
-        'division',
         'address',
         'product_name',
         'quantity',

@@ -64,7 +64,7 @@
                     <span class="font-serif text-lg font-bold tracking-widest text-slate-900 uppercase">নূরানি আংটি</span>
                 </div>
                 <p class="text-sm text-slate-500 max-w-sm mb-6 leading-relaxed">
-                    শতবর্ষ প্রাচীন রৌপ্য ও রত্ন পাথর খোদাইয়ের ঐতিহ্য ধরে রেখে আমরা কাজ করি। আধ্যাত্মিক মহিমা এবং ব্যক্তিগত ঐতিহ্যের স্মারক হিসেবে আমরা ৯২৫ স্টার্লিং সিলভারের আংটি তৈরি করি।
+                   ভাগ্যকে অনুসরণ নয়, এবার ঘুরিয়ে দিন নিজের দিকে — নূরানি আংটি 
                 </p>
             </div>
 
@@ -73,29 +73,14 @@
                 <h4 class="font-serif text-sm font-semibold tracking-wider text-slate-800 uppercase mb-4">প্রয়োজনে যোগাযোগ করুন</h4>
                 <ul class="space-y-2 text-sm">
                     <li>
-                        <a href="tel:01846252544" class="hover:text-amber-600 transition-colors duration-150 flex items-center gap-2">
+                        <a href="tel:01605722247" class="hover:text-amber-600 transition-colors duration-150 flex items-center gap-2">
                             <svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                             </svg>
-                            <span>01846 252544</span>
+                            <span>01605722247</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="tel:01846252544" class="hover:text-amber-600 transition-colors duration-150 flex items-center gap-2">
-                            <svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                            <span>01846 252544</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:01846252544" class="hover:text-amber-600 transition-colors duration-150 flex items-center gap-2">
-                            <svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                            <span>01846 252544</span>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </div>

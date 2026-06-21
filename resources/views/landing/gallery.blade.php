@@ -1,8 +1,8 @@
 <section id="gallery" class="relative py-24 bg-[#f1f5f9] overflow-hidden">
     <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <x-section-title title="গ্যালারি" subtitle="আমাদের প্রোডাক্টগুলোর ছবি" align="center" />
+    <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <x-section-title title="“যেকোনো রাশি ও সমাজের সকল স্তরের নারী-পুরুষের জন্য উপযোগী এই নূরানী  রাজমোহিনী আংটি।”"  align="center" />
 
         @if ($galleryItems->isNotEmpty())
             @php($galleryCount = $galleryItems->count())

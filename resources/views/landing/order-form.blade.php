@@ -166,7 +166,7 @@
                                 </div>
 
                                 <!-- Division Select -->
-                                <div>
+                                {{-- <div>
                                     <label for="division" class="block text-xs font-bold text-slate-700 mb-1.5">আপনার বিভাগ সিলেক্ট করুন *</label>
                                     <select
                                         id="division"
@@ -189,7 +189,7 @@
                                         @endforeach
                                     </select>
                                     @error('division')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
-                                </div>
+                                </div> --}}
 
                                 <!-- Address -->
                                 <div>

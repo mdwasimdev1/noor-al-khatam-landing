@@ -590,7 +590,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                 </svg>
             </div>
-            <span class="brand-name">Noor Al Khatam</span>
+            <span class="brand-name">Noorani Rings</span>
             <span class="brand-sub">Admin Dashboard</span>
         </div>
 
@@ -602,7 +602,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
                 </svg>
                 Hero Section
-                <span class="nav-badge">Live</span>
+
             </a>
 
             <a href="{{ route('admin.gallery.index') }}" class="nav-item {{ request()->routeIs('admin.gallery.*') ? 'active' : '' }}">
@@ -612,12 +612,12 @@
                 Gallery
             </a>
 
-            <a href="{{ route('admin.benefits.index') }}" class="nav-item {{ request()->routeIs('admin.benefits.*') ? 'active' : '' }}">
+            {{-- <a href="{{ route('admin.benefits.index') }}" class="nav-item {{ request()->routeIs('admin.benefits.*') ? 'active' : '' }}">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 Benefits
-            </a>
+            </a> --}}
 
             <a href="{{ route('admin.orders.index') }}" class="nav-item {{ request()->routeIs('admin.orders.*') ? 'active' : '' }}">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">

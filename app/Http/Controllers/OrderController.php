@@ -17,7 +17,6 @@ class OrderController extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:150'],
             'phone' => ['required', 'string', 'regex:/^(?:\+?88)?01[3-9]\d{8}$/'],
-            'division' => ['required', 'in:Dhaka,Chattogram,Rajshahi,Khulna,Barishal,Sylhet,Rangpur,Mymensingh'],
             'address' => ['required', 'string', 'max:1000'],
             'quantity' => ['required', 'integer', 'min:1', 'max:10'],
         ], [
@@ -31,7 +30,6 @@ class OrderController extends Controller
             'order_number' => $this->generateOrderNumber(),
             'customer_name' => $validated['name'],
             'phone' => $validated['phone'],
-            'division' => $validated['division'],
             'address' => $validated['address'],
             'product_name' => self::PRODUCT_NAME,
             'quantity' => $quantity,
