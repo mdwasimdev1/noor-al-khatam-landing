@@ -7,11 +7,8 @@
             <!-- Hero Text -->
             <div class="lg:col-span-6 text-center lg:text-left flex flex-col items-center lg:items-start">
 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-slate-900 leading-[1.15] tracking-wide mb-6">
-                    {{ $hero->heading_line1 }} <br>
-                    <span class="text-xl bg-linear-to-r from-amber-700 via-amber-500 to-amber-800 bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(245,158,11,0.1)]">
-                        {{ $hero->heading_line2 }}
-                    </span>
+                <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold font-serif text-amber-600 tracking-wide mb-6">
+                    {{ $hero->heading }}
                 </h1>
 
                 <p class="text-base sm:text-lg text-slate-600 max-w-xl mb-8 leading-relaxed font-sans">

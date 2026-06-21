@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class HeroSection extends Model
 {
     protected $fillable = [
-        'heading_line1',
-        'heading_line2',
+        'heading',
         'subheading',
         'cta_text',
         'cta_link',
@@ -29,8 +28,7 @@ class HeroSection extends Model
         return self::firstOrCreate(
             ['id' => 1],
             [
-                'heading_line1' => 'আংটির রাজকীয়',
-                'heading_line2' => 'আলো ধারণ করুন',
+                'heading'       => 'আংটির রাজকীয় আলো ধারণ করুন',
                 'subheading'    => 'খাঁটি ৯২৫ স্টার্লিং সিলভার এবং সম্পূর্ণ আসল ও সার্টিফাইড রত্ন পাথরের হাতে তৈরি আংটি। আপনার আধ্যাত্মিক ব্যক্তিত্ব ও চিরন্তন শৈলী ফুটিয়ে তুলতে আমাদের কাস্টম ডিজাইন।',
                 'cta_text'      => 'আংটির অর্ডার করুন',
                 'cta_link'      => '#order-form',

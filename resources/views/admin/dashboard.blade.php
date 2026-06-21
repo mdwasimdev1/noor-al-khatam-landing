@@ -34,30 +34,18 @@
                 </div>
             </div>
             <div class="p-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="grid grid-cols-1 gap-5">
                     <div>
-                        <label for="heading_line1" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Line 1 (Normal text)</label>
+                        <label for="heading" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Main Heading</label>
                         <input
                             type="text"
-                            id="heading_line1"
-                            name="heading_line1"
-                            value="{{ old('heading_line1', $hero->heading_line1) }}"
+                            id="heading"
+                            name="heading"
+                            value="{{ old('heading', $hero->heading) }}"
                             class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm font-medium transition duration-200 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-                            placeholder="e.g. আংটির রাজকীয়"
+                            placeholder="e.g. আংটির রাজকীয় আলো ধারণ করুন"
                         >
-                        @error('heading_line1')<div class="text-xs text-red-600 mt-1.5 font-medium">{{ $message }}</div>@enderror
-                    </div>
-                    <div>
-                        <label for="heading_line2" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Line 2 (Gradient text)</label>
-                        <input
-                            type="text"
-                            id="heading_line2"
-                            name="heading_line2"
-                            value="{{ old('heading_line2', $hero->heading_line2) }}"
-                            class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 text-sm font-medium transition duration-200 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-                            placeholder="e.g. আলো ধারণ করুন"
-                        >
-                        @error('heading_line2')<div class="text-xs text-red-600 mt-1.5 font-medium">{{ $message }}</div>@enderror
+                        @error('heading')<div class="text-xs text-red-600 mt-1.5 font-medium">{{ $message }}</div>@enderror
                     </div>
                 </div>
             </div>

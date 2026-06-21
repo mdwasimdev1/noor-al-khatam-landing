@@ -18,8 +18,7 @@ class HeroSectionController extends Controller
     public function update(Request $request)
     {
         $validated = $request->validate([
-            'heading_line1' => ['required', 'string', 'max:200'],
-            'heading_line2' => ['required', 'string', 'max:200'],
+            'heading' => ['required', 'string', 'max:400'],
             'subheading'    => ['required', 'string', 'max:1000'],
             'cta_text'      => ['required', 'string', 'max:100'],
             'cta_link'      => ['required', 'string', 'max:255'],
